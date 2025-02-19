@@ -79,12 +79,26 @@
     border-bottom: solid black 1px;
     font-family: "Gabarito", serif;
 }
+
 .categories p {
     background-color: #A788F6;
     color: white;
     padding: 5px;
     border-radius: 30px;
+    cursor: pointer;
+    border: solid purple 1px;
 }
+/* animation categories */
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid purple 1px;
+}
+
+
+
+
 
 .sale-image img {
     width: 100%;
@@ -100,7 +114,29 @@
     position: absolute;
     top: 10% ;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+
+    }
+    
+}
+
+
+
+
+
 .recomended{
     padding: 10px;
     font-family: "Gabarito", serif;
